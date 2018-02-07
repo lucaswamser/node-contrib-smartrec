@@ -1,0 +1,35 @@
+<script type="text/javascript">
+    RED.nodes.registerType('smart-rec',{
+        category: 'Smart Rec',
+        color: '#f48042',
+	icon: "cam.png",
+        defaults: {
+            name: {value:""},
+	    uid: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        label: function() {
+            return this.name ||"Face Recognition";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="smart-rec">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+   <div class="form-row">
+        <label for="node-input-uid"><i class="icon-tag"></i> User ID</label>
+        <input type="text" id="node-input-uid" placeholder="User ID">
+   </div>
+   <div class="form-row">
+        <label for="node-input-uid"><i class="icon-tag"></i> User API Key</label>
+        <input type="text" id="node-input-apikey" placeholder="User ID">
+   </div>
+</script>
+
+<script type="text/x-red" data-help-name="smart-rec">
+    <p>SmarRec</p>
+</script>
